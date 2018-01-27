@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114764235639686066}
   m_Layer: 0
   m_Name: Ship Explosion
-  m_TagString: Untagged
+  m_TagString: Explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1380504975058420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,8 +69,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 58263215331098390}
-  size: 1.5
-  speed: 0.8
+  size: 3
+  speed: 9
 --- !u!212 &212003010034337632
 SpriteRenderer:
   m_ObjectHideFlags: 1

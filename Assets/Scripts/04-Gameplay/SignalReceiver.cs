@@ -4,8 +4,10 @@ using UnityEngine;
 public class SignalReceiver : MonoBehaviour {
 
     public Player player;
-    public Ship ship;
+    public Explosive explosive;
+    public Emitter emitter;
     
+    [Header("Thrusters")]
     public Jet topJet;
     public Jet leftJet;
     public Jet rightJet;
@@ -48,6 +50,8 @@ public class SignalReceiver : MonoBehaviour {
             case Message.Command.Fire:
                 DestroyShip();
                 break;
+            case Message.Command.Respawn:
+                return;
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -63,6 +67,11 @@ public class SignalReceiver : MonoBehaviour {
         rightJet.TurnOff();
         bottomJet.TurnOff();
         
-        ship.SelfDestruct();
+        explosive.Detonate();
+        emitter.EmitSignal(Message.Command.Respawn);
+    }
+
+    public void Restart() {
+        enabled = true;
     }
 }

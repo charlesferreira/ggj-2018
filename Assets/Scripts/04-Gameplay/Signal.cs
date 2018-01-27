@@ -17,6 +17,7 @@ public class Signal : MonoBehaviour {
     public Color rightColor;
     public Color downColor;
     public Color fireColor;
+    public Color respawnColor;
 
     private float dissipateScale;
     private float radius = 0f;
@@ -50,6 +51,10 @@ public class Signal : MonoBehaviour {
             case Message.Command.Fire:
                 speed *= 0.33f;
                 lineDrawer.material.color = fireColor;
+                break;
+            case Message.Command.Respawn:
+                speed *= 0.85f;
+                lineDrawer.material.color = respawnColor;
                 break;
             default:
                 break;

@@ -42,4 +42,8 @@ public class PlayerInput : MonoBehaviour {
 			timeLeft = cooldown;
 		}
 	}
+
+	public void Restart() {
+		isSelfDestructing = false;
+	}
 }

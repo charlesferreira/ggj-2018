@@ -3,22 +3,22 @@
 public class Explosion : MonoBehaviour {
 
 	public new CircleCollider2D collider;
+	
 	public float size;
 	public float speed;
 
+	private float radius;
+
 	private void Start() {
-		collider.radius = 0;
+		transform.localScale = Vector3.zero;
 	}
 
 	private void Update() {
-		collider.radius += speed * Time.deltaTime;
-		if (collider.radius > size) {
+		radius += speed * Time.deltaTime;
+		transform.localScale = Vector3.one * radius;
+		if (radius > size) {
 			Destroy(gameObject);
 		}
-	}
-
-	private void OnTriggerEnter2D(Collider2D other) {
-		// começar reação em cadeia...
 	}
 
 	private void OnDrawGizmos() {
