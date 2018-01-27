@@ -1092,4 +1092,4 @@ MonoBehaviour:
   - {fileID: 298282650}
   - {fileID: 464704164}
   - {fileID: 41985283}
-  countdownTime: 0
+  countdownTime: 2
