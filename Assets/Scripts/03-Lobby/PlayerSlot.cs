@@ -45,6 +45,7 @@ public class PlayerSlot : MonoBehaviour {
     public void Leave()
     {
         isJoined = false;
+        isHighlighted = false;
         image.texture = disjoinedImage;
     }
 }

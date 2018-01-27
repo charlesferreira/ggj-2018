@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public PlayersSet playersSet;
+    
+    void InformPlayers(PlayersSet playersSet)
+    {
+        this.playersSet = playersSet;
+    }
 }
