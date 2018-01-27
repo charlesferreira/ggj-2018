@@ -49,6 +49,7 @@ public class Signal : MonoBehaviour {
                 lineDrawer.material.color = downColor;
                 break;
             case Message.Command.Fire:
+                speed *= 0.33f;
                 lineDrawer.material.color = fireColor;
                 break;
             default:
