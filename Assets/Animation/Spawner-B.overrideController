@@ -1,0 +1,12 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Spawner-B
+  m_Controller: {fileID: 9100000, guid: 27ded46a6e943ee44985abfe737b4e03, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b24231028a57ea3449d031b56d1ee75e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 50a7b7210da148942b2ec1f8bf41b3c4, type: 2}

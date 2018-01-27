@@ -14,6 +14,11 @@ public class SignalReceiver : MonoBehaviour {
     public Jet bottomJet;
 
     private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Explosion") && enabled) {
+            DestroyShip();
+            return;
+        }
+        
         var signal = other.GetComponent<Signal>();
         if (signal == null) {
             return;
