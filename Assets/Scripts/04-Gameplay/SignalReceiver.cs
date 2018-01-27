@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class SignalReceiver : MonoBehaviour {
 
-    public int playerId;
+    public Player player;
+    public Ship ship;
     
     public Jet topJet;
     public Jet leftJet;
@@ -15,15 +16,18 @@ public class SignalReceiver : MonoBehaviour {
         if (signal == null) {
             return;
         }
-        
-        if (signal.Message.playerId != playerId) {
+        if (signal.Message.playerId != player.id) {
             return;
         }
-            
+        
         Process(signal);
     }
 
     void Process(Signal signal) {
+        if (!enabled) {
+            return;
+        }
+        
         switch (signal.Message.command) {
             case Message.Command.Up:
                 bottomJet.TurnOn();
@@ -42,12 +46,23 @@ public class SignalReceiver : MonoBehaviour {
                 bottomJet.TurnOff();
                 break;
             case Message.Command.Fire:
-                // todo: destruir a nave
+                DestroyShip();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
         
         signal.Dissipate();
+    }
+
+    private void DestroyShip() {
+        enabled = false;
+        
+        topJet.TurnOff();
+        leftJet.TurnOff();
+        rightJet.TurnOff();
+        bottomJet.TurnOff();
+        
+        ship.SelfDestruct();
     }
 }

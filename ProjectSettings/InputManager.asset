@@ -50,7 +50,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 2
   - serializedVersion: 3
@@ -66,7 +66,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 2
   - serializedVersion: 3
@@ -82,7 +82,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 3
   - serializedVersion: 3
@@ -98,7 +98,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 3
   - serializedVersion: 3
@@ -114,7 +114,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 4
   - serializedVersion: 3
@@ -130,7 +130,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 4
   - serializedVersion: 3
@@ -146,7 +146,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 5
   - serializedVersion: 3
@@ -162,7 +162,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 5
   - serializedVersion: 3
@@ -178,7 +178,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 6
   - serializedVersion: 3
@@ -194,7 +194,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 6
   - serializedVersion: 3
@@ -210,7 +210,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 7
   - serializedVersion: 3
@@ -226,7 +226,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 7
   - serializedVersion: 3
@@ -242,7 +242,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 5
     joyNum: 8
   - serializedVersion: 3
@@ -258,6 +258,6 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 6
     joyNum: 8
