@@ -29,8 +29,8 @@ public class Signal : MonoBehaviour {
 
     public Message Message { get { return message; } }
 
-    public void Init(Message message)
-    {
+    public void Init(Message message) {
+        this.message = message;
         lineDrawer = GetComponent<LineRenderer>();
         dissipateScale = dissipateTime / signalWidth;
         
@@ -97,7 +97,7 @@ public class Signal : MonoBehaviour {
         }
     }
 
-    void Dissipate()
+    public void Dissipate()
     {
         lineDrawer.material.color = Color.gray;
         dissipating = true;

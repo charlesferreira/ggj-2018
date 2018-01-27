@@ -1,39 +1,53 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
-public interface Signal { }
-
 public class SignalReceiver : MonoBehaviour {
+
+    public int playerId;
     
     public Jet topJet;
     public Jet leftJet;
     public Jet rightJet;
     public Jet bottomJet;
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            topJet.TurnOn();
-            bottomJet.TurnOff();
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            bottomJet.TurnOn();
-            topJet.TurnOff();
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-            rightJet.TurnOn();
-            leftJet.TurnOff();
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow)) {
-            leftJet.TurnOn();
-            rightJet.TurnOff();
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other) {
         var signal = other.GetComponent<Signal>();
-        if (signal != null) {
-            // todo: verificar se o sinal é pra mim e processar
+        if (signal == null) {
+            return;
         }
+        
+        if (signal.Message.playerId != playerId) {
+            return;
+        }
+            
+        Process(signal);
+    }
+
+    void Process(Signal signal) {
+        switch (signal.Message.command) {
+            case Message.Command.Up:
+                bottomJet.TurnOn();
+                topJet.TurnOff();
+                break;
+            case Message.Command.Left:
+                rightJet.TurnOn();
+                leftJet.TurnOff();
+                break;
+            case Message.Command.Right:
+                leftJet.TurnOn();
+                rightJet.TurnOff();
+                break;
+            case Message.Command.Down:
+                topJet.TurnOn();
+                bottomJet.TurnOff();
+                break;
+            case Message.Command.Fire:
+                // todo: destruir a nave
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        
+        signal.Dissipate();
     }
 }

@@ -7,5 +7,5 @@ public struct Message {
     public enum Command { Up, Left, Right, Down, Fire }
 
     public Command command;
-    public int playerIndex;
+    public int playerId;
 }

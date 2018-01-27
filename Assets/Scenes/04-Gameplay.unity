@@ -233,6 +233,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 58835473611865388, guid: a12008e46b2542944b59a98859dbc748,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a12008e46b2542944b59a98859dbc748, type: 2}
   m_IsPrefabParent: 0
@@ -248,6 +253,7 @@ GameObject:
   - component: {fileID: 2043475911}
   - component: {fileID: 2043475910}
   - component: {fileID: 2043475909}
+  - component: {fileID: 2043475914}
   m_Layer: 0
   m_Name: Emitter
   m_TagString: Untagged
@@ -335,3 +341,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043475914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043475908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da52e26cfb8d864f90cf3c60804b616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitter: {fileID: 2043475909}
+  playerId: 1
+  cooldown: 0.5
