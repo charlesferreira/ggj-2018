@@ -51,7 +51,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -69,14 +69,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thetaScale: 0.01
-  speed: 15
-  dissipateTime: 1
-  dissipateScale: 0
+  speed: 10
+  dissipateTime: 0.225
   upColor: {r: 0.4005, g: 0.534, b: 0.4005, a: 1}
   leftColor: {r: 0.3484191, g: 0.4577358, b: 0.585, a: 0.528}
   rightColor: {r: 0.3613235, g: 0.5664888, b: 0.585, a: 0.547}
   downColor: {r: 0.628, g: 0.6065996, b: 0.43405882, a: 0.553}
   fireColor: {r: 1, g: 0.47794116, b: 0.47794116, a: 0.547}
+  respawnColor: {r: 0.64631903, g: 0.8161765, b: 0.16803634, a: 0.547}
 --- !u!120 &120373790176942510
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -110,13 +110,13 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.02
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:

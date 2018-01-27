@@ -1,36 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
 [RequireComponent(typeof(CircleCollider2D))]
 public class Signal : MonoBehaviour {
-
-    private Message message;
-    private CircleCollider2D collider;
+    
+    private new CircleCollider2D collider;
 
     public float thetaScale = 0.01f;
     public float speed = 1;
     public float dissipateTime = 1;
-    public float dissipateScale;
 
     public Color upColor;
     public Color leftColor;
     public Color rightColor;
     public Color downColor;
     public Color fireColor;
+    public Color respawnColor;
 
+    private float dissipateScale;
     private float radius = 0f;
     private int size;
     private LineRenderer lineDrawer;
     private float theta = 0f;
     private bool dissipating = false;
-    private float signalWidth = 0.1f;
+    private float signalWidth = 0.2f;
 
-    public Message Message { get { return message; } }
+    public Message Message { get; private set; }
 
-    public void Init(Message message)
-    {
+    public void Init(Message message) {
+        Message = message;
         lineDrawer = GetComponent<LineRenderer>();
         dissipateScale = dissipateTime / signalWidth;
         
@@ -52,6 +50,10 @@ public class Signal : MonoBehaviour {
                 speed *= 0.33f;
                 lineDrawer.material.color = fireColor;
                 break;
+            case Message.Command.Respawn:
+                speed *= 0.85f;
+                lineDrawer.material.color = respawnColor;
+                break;
             default:
                 break;
         }
@@ -66,20 +68,17 @@ public class Signal : MonoBehaviour {
     void Update()
     {
         IncreaseRadius();
-        if (dissipating)
+        if (!dissipating) return;
+        
+        signalWidth -= Time.deltaTime / dissipateScale;
+        if (signalWidth <= 0)
         {
-            signalWidth -= Time.deltaTime / dissipateScale;
-            if (signalWidth <= 0)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            else
-            {
-                lineDrawer.startWidth = signalWidth;
-                lineDrawer.endWidth = signalWidth;
-            }
+            Destroy(gameObject);
+            return;
         }
+        
+        lineDrawer.startWidth = signalWidth;
+        lineDrawer.endWidth = signalWidth;
     }
 
     private void IncreaseRadius()
@@ -98,7 +97,7 @@ public class Signal : MonoBehaviour {
         }
     }
 
-    void Dissipate()
+    public void Dissipate()
     {
         lineDrawer.material.color = Color.gray;
         dissipating = true;
