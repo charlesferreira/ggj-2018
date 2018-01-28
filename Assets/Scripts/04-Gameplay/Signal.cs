@@ -14,6 +14,7 @@ public class Signal : MonoBehaviour {
     public Color leftColor;
     public Color rightColor;
     public Color downColor;
+    public Color DissipateColor;
     public Color fireColor;
     public Color respawnColor;
 
@@ -87,8 +88,8 @@ public class Signal : MonoBehaviour {
         collider.radius = radius;
         theta = 0f;
         size = (int)((1f / thetaScale) + 1f);
-        lineDrawer.positionCount = size + 5;
-        for (int i = 0; i < size + 5; i++)
+        lineDrawer.positionCount = size;
+        for (int i = 0; i < size; i++)
         {
             theta += (2.0f * Mathf.PI * thetaScale);
             float x = radius * Mathf.Cos(theta);
@@ -99,7 +100,7 @@ public class Signal : MonoBehaviour {
 
     public void Dissipate()
     {
-        lineDrawer.material.color = Color.gray;
+        lineDrawer.material.color = DissipateColor;
         dissipating = true;
     }
 }

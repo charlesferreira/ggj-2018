@@ -103,27 +103,27 @@ public class PlayersController : MonoBehaviour {
 
     void InformPlayers()
     {
-        var team1 = new List<int>();
-        var team2 = new List<int>();
+        var teamA = new List<int>();
+        var teamB = new List<int>();
 
         for (int i = 0; i < 8; i += 2)
         {
             if (slots[i].isJoined)
             {
-                team1.Add(i);
+                teamA.Add(slots[i].joystickIndex);
             }
         }
         for (int i = 1; i < 8; i += 2)
         {
             if (slots[i].isJoined)
             {
-                team2.Add(i);
+                teamB.Add(slots[i].joystickIndex);
             }
         }
 
         var playersSet = new PlayersSet();
-        playersSet.team1 = team1;
-        playersSet.team2 = team2;
+        playersSet.teamA = teamA;
+        playersSet.teamB = teamB;
 
         gameManager.playersSet = playersSet;
     }

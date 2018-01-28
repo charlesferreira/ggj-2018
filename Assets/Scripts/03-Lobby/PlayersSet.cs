@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class PlayersSet {
 
-    public List<int> team1 = new List<int>();
-    public List<int> team2 = new List<int>();
+    public List<int> teamA = new List<int>();
+    public List<int> teamB = new List<int>();
 }

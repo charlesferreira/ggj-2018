@@ -71,12 +71,13 @@ MonoBehaviour:
   thetaScale: 0.01
   speed: 10
   dissipateTime: 0.225
-  upColor: {r: 0.4005, g: 0.534, b: 0.4005, a: 1}
-  leftColor: {r: 0.3484191, g: 0.4577358, b: 0.585, a: 0.528}
-  rightColor: {r: 0.3613235, g: 0.5664888, b: 0.585, a: 0.547}
-  downColor: {r: 0.628, g: 0.6065996, b: 0.43405882, a: 0.553}
-  fireColor: {r: 1, g: 0.47794116, b: 0.47794116, a: 0.547}
-  respawnColor: {r: 0.64631903, g: 0.8161765, b: 0.16803634, a: 0.547}
+  upColor: {r: 0.75, g: 1, b: 0.75, a: 0.178}
+  leftColor: {r: 0.5955882, g: 0.7824544, b: 1, a: 0.178}
+  rightColor: {r: 0.61764705, g: 0.96835697, b: 1, a: 0.1764706}
+  downColor: {r: 1, g: 0.96592295, b: 0.6911764, a: 0.1764706}
+  DissipateColor: {r: 0.641, g: 0.641, b: 0.641, a: 0.1764706}
+  fireColor: {r: 1, g: 0.47794116, b: 0.47794116, a: 0.49411765}
+  respawnColor: {r: 0.7918864, g: 1, b: 0.20588237, a: 0.1764706}
 --- !u!120 &120373790176942510
 LineRenderer:
   m_ObjectHideFlags: 1
