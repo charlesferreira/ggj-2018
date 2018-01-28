@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayersController : MonoBehaviour {
 
+    public GameManager gameManager;
     public List<PlayerSlot> slots;
     public Dictionary<int, int> slotByJoystick = new Dictionary<int, int>();
 
@@ -26,7 +28,8 @@ public class PlayersController : MonoBehaviour {
             currentCountdown -= Time.deltaTime;
             if (currentCountdown <= 0)
             {
-                print("Start");
+                InformPlayers();
+                SceneManager.LoadScene(2);
             }
         } else
         {
@@ -96,5 +99,32 @@ public class PlayersController : MonoBehaviour {
     void StopCountdown()
     {
         inCountdown = false;
+    }
+
+    void InformPlayers()
+    {
+        var team1 = new List<int>();
+        var team2 = new List<int>();
+
+        for (int i = 0; i < 8; i += 2)
+        {
+            if (slots[i].isJoined)
+            {
+                team1.Add(i);
+            }
+        }
+        for (int i = 1; i < 8; i += 2)
+        {
+            if (slots[i].isJoined)
+            {
+                team2.Add(i);
+            }
+        }
+
+        var playersSet = new PlayersSet();
+        playersSet.team1 = team1;
+        playersSet.team2 = team2;
+
+        gameManager.playersSet = playersSet;
     }
 }
