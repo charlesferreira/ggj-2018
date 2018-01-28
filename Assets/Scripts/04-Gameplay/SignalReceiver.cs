@@ -6,12 +6,17 @@ public class SignalReceiver : MonoBehaviour {
     public Player player;
     public Explosive explosive;
     public Emitter emitter;
+    public AudioSource sosSound;
     
     [Header("Thrusters")]
     public Jet topJet;
     public Jet leftJet;
     public Jet rightJet;
     public Jet bottomJet;
+
+    private void Start() {
+        enabled = false;
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Explosion") && enabled) {
@@ -74,6 +79,7 @@ public class SignalReceiver : MonoBehaviour {
         
         explosive.Detonate();
         emitter.EmitSignal(Message.Command.Respawn);
+        sosSound.Play();
     }
 
     public void Restart() {

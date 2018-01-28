@@ -15,28 +15,23 @@ public class Explosion : MonoBehaviour {
 		if (sound != null) {
 			sound.Play();
 		}
-
-		transform.localScale = Vector3.zero;
 	}
 
 	private void Update() {
 		radius += speed * Time.deltaTime;
-		transform.localScale = Vector3.one * radius;
+		collider.radius = radius / 2;
 		if (radius > size) {
 			StartCoroutine(DestroiBomba());
-
 		}
-		
 	}
 
 	IEnumerator DestroiBomba() {
-		GetComponent<SpriteRenderer>().enabled = false;
 		GetComponent<CircleCollider2D>().enabled = false;
 		yield return new WaitForSeconds(1);
 		Destroy(gameObject);
 	}
 	private void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
-		Gizmos.DrawWireSphere(transform.position, size);
+		Gizmos.DrawWireSphere(transform.position, size / 2f);
 	}
 }

@@ -4,15 +4,19 @@ public class PlayerInput : MonoBehaviour {
 
 	public Player player;
 	public Emitter emitter;
+	public AudioSource signalSound;
 	
 	public float cooldown;
 	
 	private float timeLeft;
 
 	private bool isSelfDestructing;
+
+	private float sensitivity = 0.5f;
 	
 	void Update () {
 		if (Input.GetKey("joystick " + player.id + " button 0") && !isSelfDestructing) {
+			signalSound.Play();
 			Send(Message.Command.Fire, false);
 			isSelfDestructing = true;
 		}
@@ -22,16 +26,17 @@ public class PlayerInput : MonoBehaviour {
 			return;
 		}
 
-		if (Input.GetAxis("joystick " + player.id + " horizontal") > 0) {
+		if (Input.GetAxis("joystick " + player.id + " horizontal") > sensitivity) {
 			Send(Message.Command.Right);
 		}
-		else if (Input.GetAxis("joystick " + player.id + " horizontal") < 0) {
+		else if (Input.GetAxis("joystick " + player.id + " horizontal") < -sensitivity) {
 			Send(Message.Command.Left);
 		}
-		else if (Input.GetAxis("joystick " + player.id + " vertical") > 0) {
+		
+		if (Input.GetAxis("joystick " + player.id + " vertical") > sensitivity) {
 			Send(Message.Command.Up);
 		}
-		else if (Input.GetAxis("joystick " + player.id + " vertical") < 0) {
+		else if (Input.GetAxis("joystick " + player.id + " vertical") < -sensitivity) {
 			Send(Message.Command.Down);
 		}
 	}

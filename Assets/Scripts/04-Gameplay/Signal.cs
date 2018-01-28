@@ -88,8 +88,8 @@ public class Signal : MonoBehaviour {
         collider.radius = radius;
         theta = 0f;
         size = (int)((1f / thetaScale) + 1f);
-        lineDrawer.positionCount = size;
-        for (int i = 0; i < size; i++)
+        lineDrawer.positionCount = size + 1;
+        for (int i = 0; i < size + 1; i++)
         {
             theta += (2.0f * Mathf.PI * thetaScale);
             float x = radius * Mathf.Cos(theta);

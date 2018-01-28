@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e99d8091ef63e4d912428f772b99d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thetaScale: 0.01
+  thetaScale: 0.05
   speed: 10
   dissipateTime: 0.225
   upColor: {r: 0.75, g: 1, b: 0.75, a: 0.178}

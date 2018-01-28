@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 747a6872546781f49a0fa53a0a8de3c9
-timeCreated: 1517082932
+guid: 33e057825f235f44da96e7c349d9d535
+timeCreated: 1517125690
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Spawner-A_0
-    21300002: Spawner-A_1
-    21300004: Spawner-A_2
-    21300006: Spawner-A_3
+    21300000: bomb_0
+    21300002: bomb_1
+    21300004: bomb_2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -46,11 +45,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 768
+  spritePixelsToUnits: 350
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -84,13 +83,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spawner-A_0
+      name: bomb_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 947
-        width: 869
-        height: 868
+        x: 25
+        y: 24
+        width: 117
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -98,13 +97,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Spawner-A_1
+      name: bomb_1
       rect:
         serializedVersion: 2
-        x: 984
-        y: 947
-        width: 869
-        height: 868
+        x: 158
+        y: 24
+        width: 117
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,27 +111,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Spawner-A_2
+      name: bomb_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 869
-        height: 868
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Spawner-A_3
-      rect:
-        serializedVersion: 2
-        x: 984
-        y: 0
-        width: 869
-        height: 868
+        x: 290
+        y: 27
+        width: 116
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

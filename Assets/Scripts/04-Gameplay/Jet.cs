@@ -2,13 +2,10 @@
 
 public class Jet : MonoBehaviour {
 
-	public SpriteRenderer sprite;
 	public Rigidbody2D rb;
+	public ParticleSystem particles;
 	public float power;
 	public float duration;
-
-	public Color colorOn;
-	public Color colorOff;
 
 	private float timeLeft;
 
@@ -16,7 +13,12 @@ public class Jet : MonoBehaviour {
 		get { return timeLeft > 0; }
 		set {
 			timeLeft = value ? duration : 0;
-			sprite.color = value ? colorOn : colorOff;
+			if (value) {
+				particles.Play();
+			}
+			else {
+				particles.Stop();
+			}
 		}
 	}
 

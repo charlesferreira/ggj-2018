@@ -20,6 +20,7 @@ public class Explosive : MonoBehaviour {
 		isDetonating = true;
 
 		Instantiate(explosion, transform.position, Quaternion.identity);
+		gameObject.SetActive(false);
 	}
 
 	public void Restart() {

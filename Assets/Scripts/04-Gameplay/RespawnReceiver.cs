@@ -3,9 +3,9 @@
 public class RespawnReceiver : MonoBehaviour {
 
 	public Player player;
-	public PlayerInput input;
 	public Ship ship;
 	public float respawnDelay;
+	public AudioSource sosSound;
 
 	private void OnTriggerEnter2D(Collider2D other) {
 		var receivedSignal = other.GetComponent<Signal>();
@@ -17,6 +17,7 @@ public class RespawnReceiver : MonoBehaviour {
 		}
 
 		if (receivedSignal.Message.command == Message.Command.Respawn) {
+			sosSound.Stop();
 			Invoke("Respawn", respawnDelay);
 			receivedSignal.Dissipate();
 		}
@@ -24,6 +25,5 @@ public class RespawnReceiver : MonoBehaviour {
 
 	void Respawn() {
 		ship.Respawn(transform.position);
-		input.Restart();
 	}
 }
