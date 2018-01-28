@@ -150,16 +150,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874370959347270, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1368129840436532, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_Name
-      value: Team-B-Player3
+      value: Team-B-Player4
       objectReference: {fileID: 0}
     - target: {fileID: 114650643028416118, guid: 59d4b552e7df0d54bba0968175556e44,
         type: 2}
       propertyPath: id
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4008647585457248, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_LocalPosition.x
@@ -300,7 +300,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &350957705
 Transform:
@@ -614,7 +614,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &809916145
 Transform:
@@ -672,6 +672,11 @@ Prefab:
       propertyPath: m_Name
       value: Team-A-Player4
       objectReference: {fileID: 0}
+    - target: {fileID: 114650643028416118, guid: 59d4b552e7df0d54bba0968175556e44,
+        type: 2}
+      propertyPath: id
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
   m_IsPrefabParent: 0
@@ -712,11 +717,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874370959347270, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1368129840436532, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_Name
-      value: Team-B-Player2
+      value: Team-B-Player1
       objectReference: {fileID: 0}
     - target: {fileID: 114650643028416118, guid: 59d4b552e7df0d54bba0968175556e44,
         type: 2}
@@ -783,16 +788,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874370959347270, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1368129840436532, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_Name
-      value: Team-B-Player4
+      value: Team-B-Player2
       objectReference: {fileID: 0}
     - target: {fileID: 114650643028416118, guid: 59d4b552e7df0d54bba0968175556e44,
         type: 2}
       propertyPath: id
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4008647585457248, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_LocalPosition.x
@@ -927,11 +932,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874370959347270, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1368129840436532, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_Name
-      value: Team-A-Player1
+      value: Team-A-Player3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114650643028416118, guid: 59d4b552e7df0d54bba0968175556e44,
+        type: 2}
+      propertyPath: id
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
@@ -973,11 +983,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874370959347270, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1368129840436532, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_Name
-      value: Team-A-Player2
+      value: Team-A-Player1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
@@ -1110,16 +1120,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874370959347270, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1368129840436532, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_Name
-      value: Team-B-Player1
+      value: Team-B-Player3
       objectReference: {fileID: 0}
     - target: {fileID: 114650643028416118, guid: 59d4b552e7df0d54bba0968175556e44,
         type: 2}
       propertyPath: id
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4008647585457248, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1228,7 +1238,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &1863358834
 Transform:
@@ -1280,11 +1290,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874370959347270, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1368129840436532, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
       propertyPath: m_Name
-      value: Team-A-Player3
+      value: Team-A-Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114650643028416118, guid: 59d4b552e7df0d54bba0968175556e44,
+        type: 2}
+      propertyPath: id
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59d4b552e7df0d54bba0968175556e44, type: 2}
@@ -1373,7 +1388,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &2079401284
 Transform:
